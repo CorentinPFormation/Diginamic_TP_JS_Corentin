@@ -14,7 +14,7 @@ class Book{
     }
 
     showInfo = function () {
-        return `📘 ${this.title} (${this.year}) par ${this.author}`;
+        return `${this.title} (${this.year}) par ${this.author}`;
     };
 }
 

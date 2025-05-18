@@ -15,12 +15,12 @@ function demarrer() {
 
   do {
     choix = prompt(
-      "Bibliothèque \n\r" +
+      "Bibliothèque \n" +
       "1. Ajouter un livre\n" +
       "2. Afficher les livres\n" +
       "3. Rechercher un livre\n" +
       "4. Supprimer un livre\n" +
-      "5. Quitter\n\n" +
+      "5. Quitter\n" +
       "Entrez votre choix :"
     );
     console.log("Choix utilisateur : ", choix);
