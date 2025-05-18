@@ -26,7 +26,7 @@ function addBook(e) {
   const author = document.getElementById("auteur").value.trim();
 
   if (!title || !year || isNaN(year) || !author) {
-    return alert("Veuillez entrer un titre, une année valide et un auteur.");
+    return alert("Veuillez entrer un titre, une année et un auteur valide svp.");
   }
 
   const newBook = new Book(title, year, author);
@@ -40,7 +40,7 @@ function displayBooks() {
   div.innerHTML = "";
 
   if (library.length === 0) {
-    return div.innerText = "Aucun livre dans la bibliothèque.";
+    return div.innerText = "Aucun livre n'a été trouvé";
   }
 
   library.forEach((book, index) => {
@@ -51,12 +51,12 @@ function displayBooks() {
     text.textContent = book.showInfo();
 
     const btnEdit = document.createElement("button");
-    btnEdit.textContent = "✏️ Modifier";
+    btnEdit.textContent = "Modifier";
     btnEdit.style.marginLeft = "5px";
     btnEdit.addEventListener("click", () => editBook(book));
 
     const btnDelete = document.createElement("button");
-    btnDelete.textContent = "🗑 Supprimer";
+    btnDelete.textContent = "Supprimer";
     btnDelete.style.marginLeft = "10px";
     btnDelete.addEventListener("click", () => {
       library.splice(index, 1);

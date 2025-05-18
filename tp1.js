@@ -44,7 +44,7 @@ function demarrer() {
         break;
       default:
         console.log("Option invalide sélectionnée : ", choix);
-        alert("Option invalide. Veuillez choisir entre 1 et 5.");
+        alert("Veuillez choisir entre 1 et 5.");
     }
   } while (choix !== "5");
 }
@@ -79,7 +79,7 @@ function afficherLivres() {
     return alert("La bibliothèque est vide.");
   }
 
-  let message = "📖 Liste des livres :\n\n";
+  let message = "Liste des livres :\n\n";
   bibliotheque.forEach((livre, index) => {
     message += `${index + 1}.\n${livre.afficherInformations()}\n\n`;
   });
@@ -98,8 +98,8 @@ function rechercherLivre() {
     console.log("Livre trouvé :", livreTrouve);
     alert("Livre trouvé :\n\n" + livreTrouve.afficherInformations());
   } else {
-    console.log("Livre non trouvé pour le titre : ", titreRecherche);
-    alert("Livre non trouvé.");
+    console.log("le livre na pas été trouvé : ", titreRecherche);
+    alert("le livre na pas été trouvé.");
   }
 }
 
@@ -112,10 +112,10 @@ function supprimerLivre() {
   if (index !== -1) {
     let livreSupprime = bibliotheque.splice(index, 1)[0];
     console.log("Livre supprimé avec succès :", livreSupprime);
-    alert("Livre supprimé avec succès.");
+    alert("Le livre a bien été supprimé !");
   } else {
     console.log("Livre à supprimer non trouvé pour le titre : ", titreASupprimer);
-    alert("Livre non trouvé.");
+    alert("Le livre n'a pas été trouvé.");
   }
 }
 
